@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Welcome - Inovice App</title>
+</head>
+<body>
+<form action="#" th:action="@{/addemployment.html}" th:object="${newemployee}" method="post">
+
+   <!-- <span th:if="${#fields.hasErrors('id')}" th:error="*{id}">Id Error</span>-->
+    <p>Enter Employee Name: <input type="text" th:field="*{Name}"/></p>
+    <p>Enter Email address: <input type="text" th:field="*{Emailaddress}"/></p>
+    <p>Enter Organisation: <input type="text" th:field="*{Organization}"/></p>
+    <p>Enter Start Date: <input type="text" th:field="*{StartDate}"/></p>
+    <p>Enter End Date: <input type="text" th:field="*{EndDate}"/></p>
+
+    <input type="submit" value="Add product" />
+</form>
+
+
+</body>
+</html>
