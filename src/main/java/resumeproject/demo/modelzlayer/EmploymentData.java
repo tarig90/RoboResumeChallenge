@@ -1,8 +1,8 @@
-package ModelsLayer;
+package resumeproject.demo.modelzlayer;
 
 import java.util.Date;
 
-public class EmploymentDetails
+public class EmploymentData
 {
     private String Name;
     private String Emailaddress;
@@ -49,4 +49,5 @@ public class EmploymentDetails
     public void setEndDate(Date endDate) {
         EndDate = endDate;
     }
+
 }
