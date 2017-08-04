@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employement details</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+<h1>Employee added successfully</h1>
+
+<!--  -->
+<p th:text="'SKU: ' + ${newemp.Name}"/>
+<p th:text="'Title: ' + ${newemp.Emailaddress}"/>
+<p th:text="'Item Code: ' + ${newemp.Organization}"/>
+<p th:text="'Description: ' + ${newemp.StartDate}"/>
+<p th:text="'Price: ' + ${newemp.EndDate}"/>
+
+
+<!--initiates a GET back to /addproduct-->
+<a href="/addbook">Add another Employee</a>
+</body>
+</html>

@@ -2,10 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
     <meta charset="UTF-8"/>
-    <title>Welcome - Inovice App</title>
+    <title>Welcome - Emplyment App</title>
 </head>
 <body>
-<form action="#" th:action="@{/addemployment.html}" th:object="${newemployee}" method="post">
+
+<h1 th:text="${addnewemployeemessage}">Add  emp</h1>
+<form action="#" th:action="@{/addemployment}" th:object="${newemp}" method="post">
 
    <!-- <span th:if="${#fields.hasErrors('id')}" th:error="*{id}">Id Error</span>-->
     <p>Enter Employee Name: <input type="text" th:field="*{Name}"/></p>
@@ -14,7 +16,7 @@
     <p>Enter Start Date: <input type="text" th:field="*{StartDate}"/></p>
     <p>Enter End Date: <input type="text" th:field="*{EndDate}"/></p>
 
-    <input type="submit" value="Add product" />
+    <input type="submit" value="Add Employee" />
 </form>
 
 

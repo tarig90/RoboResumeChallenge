@@ -38,7 +38,7 @@ public class MainController
     {
         model.addAttribute("newemp", new EmploymentData());
 
-        model.addAttribute("addnewemployee","please add Employee");
+        model.addAttribute("addnewemployeemessage","please add Employee");
         return "addemployment";
     }
 
@@ -49,7 +49,7 @@ public class MainController
             return "addmployment";
         }
         dalemprepository.save(emp); // save it to the db
-        return "bookadditionconfirmation";
+        return "employeeconfirmation";
     }
 
 
