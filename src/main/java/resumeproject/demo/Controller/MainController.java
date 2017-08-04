@@ -7,9 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import resumeproject.demo.dalrepositories.Dalemprepository;
 import resumeproject.demo.modelzlayer.EmploymentData;
 
 import javax.validation.Valid;
@@ -19,8 +19,8 @@ import javax.validation.Valid;
 public class MainController
 {
 
-   // @Autowired
-   // EmpRepositry empRepositry;
+    @Autowired
+    Dalemprepository dalemprepository;
 
 
 
@@ -36,19 +36,19 @@ public class MainController
     @GetMapping("/addmployment")
     public String addEmployment(Model model)
     {
-        model.addAttribute("newbook", new EmploymentData());
+        model.addAttribute("newemp", new EmploymentData());
 
         model.addAttribute("addnewemployee","please add Employee");
         return "addemployment";
     }
 
-    @PostMapping("/addbook")
-    public String postProduct(@Valid @ModelAttribute("newbook") EmploymentData emp, BindingResult bindingResult)
+    @PostMapping("/addmployment")
+    public String postProduct(@Valid @ModelAttribute("newemp") EmploymentData emp, BindingResult bindingResult)
     {
         if (bindingResult.hasErrors()){
-            return "addbook";
+            return "addmployment";
         }
-        //resumeproject.demo.EmployeeRepositry.save(book); // save it to the db
+        dalemprepository.save(emp); // save it to the db
         return "bookadditionconfirmation";
     }
 
