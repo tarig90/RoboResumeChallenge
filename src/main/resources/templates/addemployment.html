@@ -7,18 +7,19 @@
 <body>
 
 <h1 th:text="${addnewemployeemessage}">Add  emp</h1>
+
 <form action="#" th:action="@{/addemployment}" th:object="${newemp}" method="post">
 
-   <!-- <span th:if="${#fields.hasErrors('id')}" th:error="*{id}">Id Error</span>-->
+
     <p>Enter Employee Name: <input type="text" th:field="*{Name}"/></p>
     <p>Enter Email address: <input type="text" th:field="*{Emailaddress}"/></p>
     <p>Enter Organisation: <input type="text" th:field="*{Organization}"/></p>
     <p>Enter Start Date: <input type="text" th:field="*{StartDate}"/></p>
     <p>Enter End Date: <input type="text" th:field="*{EndDate}"/></p>
 
-    <input type="submit" value="Add Employee" />
+    <input type="submit" value="AddEmployee" />
+    <input type="reset" value="Reset"/>
+
 </form>
-
-
 </body>
 </html>

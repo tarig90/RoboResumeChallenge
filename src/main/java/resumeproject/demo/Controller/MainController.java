@@ -33,7 +33,7 @@ public class MainController
     }
 
 
-    @GetMapping("/addmployment")
+    @GetMapping("/addemployment")
     public String addEmployment(Model model)
     {
         model.addAttribute("newemp", new EmploymentData());
@@ -42,12 +42,9 @@ public class MainController
         return "addemployment";
     }
 
-    @PostMapping("/addmployment")
-    public String postProduct(@Valid @ModelAttribute("newemp") EmploymentData emp, BindingResult bindingResult)
+    @PostMapping("/addemployment")
+    public String postProduct( @ModelAttribute("newemp") EmploymentData emp)
     {
-        if (bindingResult.hasErrors()){
-            return "addmployment";
-        }
         dalemprepository.save(emp); // save it to the db
         return "employeeconfirmation";
     }
