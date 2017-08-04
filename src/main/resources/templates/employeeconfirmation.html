@@ -8,14 +8,15 @@
 <h1>Employee added successfully</h1>
 
 <!--  -->
-<p th:text="'SKU: ' + ${newemp.Name}"/>
-<p th:text="'Title: ' + ${newemp.Emailaddress}"/>
-<p th:text="'Item Code: ' + ${newemp.Organization}"/>
-<p th:text="'Description: ' + ${newemp.StartDate}"/>
-<p th:text="'Price: ' + ${newemp.EndDate}"/>
+<p th:text="'Name: ' + ${newemp.Name}"/>
+<p th:text="'Email: ' + ${newemp.Emailaddress}"/>
+<p th:text="'Organization: ' + ${newemp.Organization}"/>
+<p th:text="'StartDate: ' + ${newemp.StartDate}"/>
+<p th:text="'EndDate: ' + ${newemp.EndDate}"/>
 
 
 <!--initiates a GET back to /addproduct-->
 <a href="/addbook">Add another Employee</a>
+<a href="/displaydetails">Display Employee</a>
 </body>
 </html>

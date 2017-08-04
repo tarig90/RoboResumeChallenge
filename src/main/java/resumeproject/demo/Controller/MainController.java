@@ -50,13 +50,13 @@ public class MainController
     }
 
 
-   /* @GetMapping("/displayallbooks")
+    @GetMapping("/displaydetails")
     public String displayBooks(Model model)
     {
-        Iterable<Book> bookList = bookRepository.findAll();
-        model.addAttribute("books",bookList);
-        return "displayallbooks";
+        Iterable<EmploymentData> EmployeeList = dalemprepository.findAll();
 
+        model.addAttribute("employeez", EmployeeList);
 
-    }*/
+        return "displaydetails";
+    }
 }
