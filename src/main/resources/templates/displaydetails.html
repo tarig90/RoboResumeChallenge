@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
 </head>
 <body>
-<h1>All Books Displayed</h1>
+<h1>All Books Displayed Report</h1>
 
 <table>
 
@@ -15,6 +15,7 @@
         <td><p>Organization</p></td>
         <td><p>StartDate</p></td>
         <td><p>EndDate</p></td>
+        <td><p>Number of Days</p></td>
     </tr>
 
 
@@ -25,10 +26,11 @@
             <td><p th:text="${employee.Organization}"/></td>
             <td><p th:text="${employee.StartDate}"/></td>
             <td><p th:text="${employee.EndDate}"/></td>
+            <td><p th:text="${employee.NumOfDays}"/></td>
         </tr>
     </th:block>
 </table>
-<!--initiates a GET back to /addproduct-->
+<!--initiates a GET back to /add an employee-->
 <a href="/addemployee">Add another employee</a>
 </body>
 </html>

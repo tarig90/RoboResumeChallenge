@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
@@ -13,11 +15,28 @@ public class EmploymentData
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @NotNull
+    @Size(min=4, max=20)
     private String Name;
+
+    @NotNull
+    @Size(min=7, max=40)
     private String Emailaddress;
+
+    @NotNull
+    @Size(min=5, max=20)
     private String Organization;
-    private Date StartDate;
-    private Date EndDate;
+
+    @NotNull
+    @Size(min=8, max=10)
+    private String StartDate;
+    @Size(max=10)
+    private String EndDate;
+
+    private long NumOfDays;
+
+
 
 
     public long getId() {
@@ -52,24 +71,28 @@ public class EmploymentData
         Organization = organization;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return StartDate;
     }
 
-    public void setStartDate(Date startDate) {
-        StartDate = startDate;
+    public void setStartDate(String startDate) {
+        this.StartDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return EndDate;
     }
 
-    public void setEndDate(Date endDate) {
-        EndDate = endDate;
+    public void setEndDate(String endDate) {
+        this.EndDate = endDate;
+    }
+    public long getNumOfDays() {
+        return NumOfDays;
     }
 
-
-
+    public void setNumOfDays(long numOfDays) {
+        NumOfDays = numOfDays;
+    }
 
 
 }
