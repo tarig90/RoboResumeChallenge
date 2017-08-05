@@ -72,7 +72,7 @@ public class MainController
         System.out.println(emp.getName());
 
         try {
-            if(emp.getEndDate()!=null)
+            if(emp.getEndDate()== null)
             {
                emp.setEndDate(df.format(date));
             }

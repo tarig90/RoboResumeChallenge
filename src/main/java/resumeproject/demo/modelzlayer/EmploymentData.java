@@ -17,21 +17,21 @@ public class EmploymentData
     private long id;
 
     @NotNull
-    @Size(min=4, max=20)
+
     private String Name;
 
     @NotNull
-    @Size(min=7, max=40)
+
     private String Emailaddress;
 
     @NotNull
-    @Size(min=5, max=20)
+
     private String Organization;
 
     @NotNull
-    @Size(min=8, max=10)
+
     private String StartDate;
-    @Size(max=10)
+
     private String EndDate;
 
     private long NumOfDays;
